@@ -1,0 +1,18 @@
+
+/* style document */
+body {
+    background-color: #141313;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
