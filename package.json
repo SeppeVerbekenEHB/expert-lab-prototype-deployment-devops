@@ -1,5 +1,12 @@
 {
+  "name": "expert-lab-sprint-1",
+  "scripts": {
+    "test": "jest"
+  },
   "dependencies": {
     "node.js": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
