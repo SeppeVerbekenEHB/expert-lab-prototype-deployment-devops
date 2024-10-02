@@ -1,10 +1,13 @@
-FROM node:18-alpine
+# Use the official Nginx image from Docker Hub
+FROM nginx:alpine
 
-WORKDIR /usr/app
+# Remove the default Nginx static files
+RUN rm -rf /usr/share/nginx/html/*
 
-COPY ./package*.json ./
+# Copy your static files into the Nginx directory
+COPY ../html/index.html /usr/share/nginx/html/index.html
+COPY ../css/indexStyle.css /usr/share/nginx/html/indexStyle.css
+COPY sum.js /usr/share/nginx/html/sum.js
 
-RUN echo 'Starting the installation of the dependencies'
-RUN npm install --quiet
-
-CMD ["npm", "test"]
+# Expose port 80 (default Nginx port)
+EXPOSE 80
