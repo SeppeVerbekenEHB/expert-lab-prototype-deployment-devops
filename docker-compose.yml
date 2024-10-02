@@ -1,0 +1,18 @@
+version: '3'
+services:
+  app:
+    image: seppeverbeken/app:latest
+    container_name: my-static-app
+    ports:
+      - "8080:80"
+    restart: always  # Automatically restart the app container if it stops
+
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock  # Allow Watchtower to interact with the Docker daemon
+    environment:
+      - WATCHTOWER_CLEANUP=true  # Clean up old images after updating
+      - WATCHTOWER_POLL_INTERVAL=30  # Check for updates every 30 seconds

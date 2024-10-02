@@ -5,8 +5,8 @@ FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copy your static files into the Nginx directory
-COPY ../html/index.html /usr/share/nginx/html/index.html
-COPY ../css/indexStyle.css /usr/share/nginx/html/indexStyle.css
+COPY html/ /usr/share/nginx/html/
+COPY css/ /usr/share/nginx/html/css/
 COPY sum.js /usr/share/nginx/html/sum.js
 
 # Expose port 80 (default Nginx port)
