@@ -15,4 +15,4 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock  # Allow Watchtower to interact with the Docker daemon
     environment:
       - WATCHTOWER_CLEANUP=true  # Clean up old images after updating
-      - WATCHTOWER_POLL_INTERVAL=30  # Check for updates every 30 seconds
+      - WATCHTOWER_POLL_INTERVAL=10  # Check for updates every 10 seconds
