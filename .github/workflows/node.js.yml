@@ -48,4 +48,3 @@ jobs:
         with:
           push: true
           tags: seppeverbeken/app:latest
-
