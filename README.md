@@ -1,10 +1,10 @@
-# expert-lab-sprint-1
+# expert-lab-prototype-deployment-devops
 
 This project is a simple static website built using **HTML** and **CSS**. The project utilizes a **CI/CD pipeline** that automatically builds a Docker image and pushes it to **Docker Hub** upon changes in the repository. Additionally, **Watchtower** is used to automatically update the running Docker container with the latest version of the website.
 
 ## Table of Contents
 
-- [expert-lab-sprint-1](#expert-lab-sprint-1)
+- [expert-lab-prototype-deployment-devops](#expert-lab-prototype-deployment-devops)
   - [Table of Contents](#table-of-contents)
   - [Project Overview](#project-overview)
   - [Technologies Used](#technologies-used)
