@@ -2,8 +2,8 @@
   "name": "expert-lab-sprint-1",
   "scripts": {
     "test": "jest",
-    "start": "node index.js",
-    "integration-test": "jest --config jest.integration.config.js"
+    "start": "node app.js",
+    "integration-test": "jest --config jest.integration.config.js --detectOpenHandles"
   },
   "dependencies": {
     "express": "^4.21.0",
