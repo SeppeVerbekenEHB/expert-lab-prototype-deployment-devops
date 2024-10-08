@@ -2,12 +2,15 @@
   "name": "expert-lab-sprint-1",
   "scripts": {
     "test": "jest",
-    "start": "node index.js"
+    "start": "node index.js",
+    "integration-test": "jest --config jest.integration.config.js"
   },
   "dependencies": {
+    "express": "^4.21.0",
     "node.js": "^0.0.1-security"
   },
   "devDependencies": {
-    "jest": "^29.7.0"
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
   }
 }

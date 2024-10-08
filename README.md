@@ -1,6 +1,6 @@
 # expert-lab-prototype-deployment-devops
 
-This project is a simple static website built using **HTML** and **CSS**. The project utilizes a **CI/CD pipeline** that automatically builds a Docker image and pushes it to **Docker Hub** upon changes in the repository. Additionally, **Watchtower** is used to automatically update the running Docker container with the latest version of the website.
+This project is a simple static website built using **HTML** and **CSS**. The project utilizes a **CI/CD pipeline** that automatically builds a Docker image and pushes it to **Docker Hub** upon changes in the repository. Additionally, **Watchtower** is used to automatically update the running Docker container with the latest version of the website. The project has **unit tests** as well as **integration tests** to ensure the functionality of the web application.
 
 ## Table of Contents
 
@@ -16,6 +16,7 @@ This project is a simple static website built using **HTML** and **CSS**. The pr
   - [Running the Project Locally](#running-the-project-locally)
     - [Using Docker Compose](#using-docker-compose)
   - [Automatic Updates with Watchtower](#automatic-updates-with-watchtower)
+  - [Integration Tests](#integration-tests)
 
 ## Project Overview
 
@@ -31,6 +32,8 @@ A separate service, **Watchtower**, runs in parallel to ensure the Docker contai
 - **Watchtower**: Tool for automatically updating Docker containers.
 - **GitHub Actions**: For automating the CI/CD pipeline.
 - **Jest**: For running tests.
+- **Supertest**: Library for testing HTTP servers.
+- **Express**: Web framework used to create the API for integration testing.
 
 ## Folder Structure
 
@@ -46,7 +49,9 @@ A separate service, **Watchtower**, runs in parallel to ensure the Docker contai
 ├── Css/
 │   └── indexStyle.css
 ├── sum.js
+├── app.js
 ├── Dockerfile
+├── jest.integration.config.js
 ├── docker-compose.yml
 ├── package.json
 ├── package-lock.json
@@ -150,3 +155,17 @@ To verify Watchtower logs, you can run:
 ```bash
 docker logs watchtower
 ```
+
+## Integration Tests
+
+The project includes integration tests to verify the functionality of the web application. To run the integration tests, follow these steps:
+
+1. Ensure you have installed the necessary dependencies:
+   ```bash
+   npm install
+   ```
+2. Run the integration tests using the following command:
+   ```bash
+   npm run integration-test
+   ```
+The integration tests will verify that the API responds correctly to the HTTP request.
