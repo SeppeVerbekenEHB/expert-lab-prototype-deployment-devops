@@ -30,17 +30,28 @@ A separate service, **Watchtower**, runs in parallel to ensure the Docker contai
 - **Nginx**: Web server used to serve the static content.
 - **Watchtower**: Tool for automatically updating Docker containers.
 - **GitHub Actions**: For automating the CI/CD pipeline.
+- **Jest**: For running tests.
 
 ## Folder Structure
 
 ```bash
 .
+├── __tests__/
+│   └── sum.test.js
+├── github/
+│   └── workflows/
+│       └── node.js.yml
 ├── Html/
 │   └── index.html
 ├── Css/
 │   └── indexStyle.css
+├── sum.js
 ├── Dockerfile
 ├── docker-compose.yml
+├── package.json
+├── package-lock.json
+├── LICENSE
+├── .gitignore
 └── README.md
 ```
 ## Docker Setup
@@ -71,7 +82,7 @@ This **Dockerfile**:
 
 ### Docker Compose
 
-I use Docker Compose to orchestrate running both the **website** and **Watchtower** containers:
+The project uses Docker Compose to orchestrate running both the **website** and **Watchtower** containers:
 
 ```yaml
 version: '3'
@@ -98,11 +109,11 @@ services:
 
 ## CI/CD Pipeline
 
-The project uses GitHub Actions for Continuous Integration and Continuous Deployment (CI/CD). Every time changes are pushed to the **main** branch, the pipeline does the following:
+The project uses GitHub Actions for Continuous Integration and Continuous Deployment (CI/CD). Every time changes are pushed to the `main` branch, the pipeline does the following:
 
 1. Runs tests (if applicable).
 2. Builds the Docker image.
-3. Pushes the image to Docker Hub as **seppeverbeken/app:latest**.
+3. Pushes the image to Docker Hub as `seppeverbeken/app:latest`.
 
 ## Running the Project Locally
 To run the project locally using Docker, follow these steps:
