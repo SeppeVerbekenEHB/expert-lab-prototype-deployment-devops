@@ -71,7 +71,7 @@ jobs:
           cache: 'npm'
       - run: npm install
       - run: npm run build --if-present
-      - run: npx cypress run  # Run Cypress tests
+      - run: npx cypress run
   custom-action:
     runs-on: ubuntu-latest
     steps:
@@ -79,10 +79,10 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18.x'  # Set the Node.js version
+          node-version: '18.x'
       - name: Install dependencies
-        run: npm install  # Install dependencies for the custom action
+        run: npm install
       - name: Run custom action
-        uses: ./.github/actions  # Make sure the path to your custom action is correct
+        uses: ./.github/actions
         with:
-          who-to-greet: 'Mona the Octocat'
+          who-to-greet: 'Seppe Verbeken'
