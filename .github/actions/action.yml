@@ -1,15 +1,10 @@
-name: 'Hello World JS Action'
-description: 'Greet someone and record the time'
-runs:
-  using: 'node16'
-  main: '../../customAction.js'
-
+name: 'Custom Action'
+description: 'Greeting the input name'
 inputs:
   who-to-greet:
     description: 'Who to greet'
     required: true
-    default: 'World'
-    
-outputs:
-  time:
-    description: 'The time we greeted you'
+    default: 'world'
+runs:
+  using: 'node12'
+  main: '../../customAction.js'  # Ensure this points to your JavaScript file
