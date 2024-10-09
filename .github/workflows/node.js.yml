@@ -74,7 +74,7 @@ jobs:
 
       # Run your custom action here
       - name: Run custom action
-        uses: ./github/actions/my-custom-action  # Adjust this path to your custom action
+        uses: .github/workflows/action.yml  # Adjust this path to your custom action
         with:
           name: 'John Doe'  # Pass any inputs required by your custom action
 
