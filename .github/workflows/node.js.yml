@@ -77,6 +77,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run custom action
-        uses: ./.github/actions/hello-world-js
+        uses: ./.github/actions/action.yml
         with:
           who-to-greet: 'Mona the Octocat'
