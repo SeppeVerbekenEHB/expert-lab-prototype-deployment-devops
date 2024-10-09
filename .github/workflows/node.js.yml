@@ -77,6 +77,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run custom action
-        uses: ./.github/actions/action.yml
+        uses: ./.github/actions
         with:
           who-to-greet: 'Mona the Octocat'
