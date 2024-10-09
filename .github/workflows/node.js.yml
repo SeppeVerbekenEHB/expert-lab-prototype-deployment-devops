@@ -71,4 +71,11 @@ jobs:
           cache: 'npm'
       - run: npm install
       - run: npm run build --if-present
+
+      # Run your custom action here
+      - name: Run custom action
+        uses: ./github/actions/my-custom-action  # Adjust this path to your custom action
+        with:
+          name: 'John Doe'  # Pass any inputs required by your custom action
+
       - run: npx cypress run  # Run Cypress tests

@@ -7,6 +7,7 @@
     "e2e-test": "cypress open"
   },
   "dependencies": {
+    "@actions/core": "^1.11.1",
     "express": "^4.21.0",
     "node.js": "^0.0.1-security"
   },
@@ -14,5 +15,11 @@
     "cypress": "^13.15.0",
     "jest": "^29.7.0",
     "supertest": "^7.0.0"
-  }
+  },
+  "description": "This project is a simple static website built using **HTML** and **CSS**. The project utilizes a **CI/CD pipeline** that automatically builds a Docker image and pushes it to **Docker Hub** upon changes in the repository. Additionally, **Watchtower** is used to automatically update the running Docker container with the latest version of the website. The project has **unit tests** as well as **integration tests** to ensure the functionality of the web application.",
+  "version": "1.0.0",
+  "main": "app.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
