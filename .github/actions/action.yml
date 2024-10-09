@@ -2,7 +2,7 @@ name: 'Hello World JS Action'
 description: 'Greet someone and record the time'
 runs:
   using: 'node16'
-  main: 'index.js'
+  main: '../../customAction.js'
 
 inputs:
   who-to-greet:
