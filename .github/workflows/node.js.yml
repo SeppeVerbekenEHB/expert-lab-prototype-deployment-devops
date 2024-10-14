@@ -83,6 +83,6 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run custom action
-        uses: SeppeVerbekenEHB/custom-greeting-action@v1
+        uses: SeppeVerbekenEHB/custom-greeting-action@v2
         with:
           who-to-greet: 'Seppe Verbeken'
